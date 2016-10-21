@@ -54,7 +54,7 @@ zstyle ':completion:*' special-dirs true
 plugins=(archlinux sudo git zsh-syntax-highlighting sublime fancy-ctrl-z cp)
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:$HOME/.gem/ruby/2.3.0/bin:/usr/bin/core_perl/:$HOME/.rbenv/bin/"
+export PATH="/bin:/usr/local/bin:/usr/bin:$HOME/.gem/ruby/2.3.0/bin:/usr/bin/core_perl/:$HOME/.rbenv/bin/"
 
 source $ZSH/oh-my-zsh.sh
 
