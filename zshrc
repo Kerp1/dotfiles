@@ -102,7 +102,7 @@ function path() {echo $PATH | tr ':' '\n'}
 
 eval "$(rbenv init -)"
 
-source ~/projects/tejpdotfiles/bin/z.sh
+source $HOME/.dotfiles/bin/z/z.sh
 
 function do_enter() {
     if [ -n "$BUFFER" ]; then
