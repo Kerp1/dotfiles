@@ -1,6 +1,8 @@
 xterm.background: black
 xterm.foreground: white
 
+URxvt.letterSpace: -1
+
 URxvt.loginshell: false
 URxvt.internalborder: 0
 URxvt.underlinecolor: #999999
