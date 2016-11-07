@@ -10,7 +10,7 @@ URxvt.cutchars: "`\"()*,<>[]{}|'"
 !URxvt.print-pipe: cat >/tmp/xxx
 URxvt.visualBell: false
 URxvt.urgentOnBell: true
-URxvt.perl-ext-common: default,clipboard,confirm-paste,url-select,bell-command,font-size
+URxvt.perl-ext-common: default,clipboard,confirm-paste,url-select,bell-command,font-size,tabbedex
 URxvt.termName: rxvt-256color
 
 ! --[ URxvt - URL Handling ]-------------------------------
@@ -27,6 +27,11 @@ URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 URxvt.scrollBar: off
 
 URxvt.depth: 32
+
+! Tabs
+URxvt.tabbed.autohide: true
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tab-bg: 74
 
 ! Change font size on the fly
 URxvt.keysym.C-Up:     perl:font-size:increase

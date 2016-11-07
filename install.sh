@@ -10,3 +10,5 @@ ln -s ~/.dotfiles/xinitrc ~/.xinitrc
 
 ln -s ~/.dotfiles/Xresources ~/.Xresources
 ln -s ~/.dotfiles/Xresources ~/.Xdefaults
+
+sh ~/.dotfiles/bin/urxvt-tabbed/install

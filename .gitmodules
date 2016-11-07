@@ -7,3 +7,6 @@
 [submodule "bin/z"]
 	path = bin/z
 	url = https://github.com/rupa/z
+[submodule "bin/urxvt-tabbed"]
+	path = bin/urxvt-tabbed
+	url = https://github.com/mina86/urxvt-tabbedex
