@@ -74,6 +74,8 @@ else
     export BROWSER=w3m
 fi
 
+setopt no_share_history
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
