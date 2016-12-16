@@ -54,7 +54,13 @@ zstyle ':completion:*' special-dirs true
 plugins=(archlinux sudo git zsh-syntax-highlighting sublime fancy-ctrl-z cp)
 # User configuration
 
-export PATH="/bin:/usr/local/bin:/usr/bin:$HOME/.gem/ruby/2.3.0/bin:/usr/bin/core_perl/:$HOME/.rbenv/bin/"
+export PATH="/bin:/usr/local/bin:/usr/bin"
+#Ruby
+export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin:$HOME/.rbenv/bin/"
+#Perl
+export PATH="$PATH:/usr/bin/core_perl/"
+#Rust
+export PATH="$PATH:$HOME/.cargo/bin"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,6 +101,11 @@ alias irkk="ssh -t cantina irkk"
 alias gspp="git stash && git pull --rebase && git stash pop"
 alias digitvpn="sudo openvpn /etc/openvpn/digit.conf"
 alias pbuf="xclip -selection c"
+alias cb="cargo build"
+alias cr="cargo run"
+alias pacupg="pacaur -Syu"
+alias eduroam="sudo nmcli con up id eduroam || (sudo systemctl restart NetworkManager.service && sudo nmcli con up id eduroam &)"
+alias lunch="curl https://chalmers.it/lunch/feed | less"
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
@@ -123,3 +134,4 @@ function do_enter() {
 }
 zle -N do_enter
 bindkey '^m' do_enter
+
