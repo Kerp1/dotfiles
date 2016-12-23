@@ -11,5 +11,6 @@ IMAGE=/tmp/i3lock.png
 BLURTYPE="4x6"
 
 scrot $IMAGE
+notify-send "Locking..."
 convert $IMAGE -level 0%,100%,0.6 -blur $BLURTYPE $IMAGE
 i3lock -u -i $IMAGE
