@@ -1,14 +1,16 @@
 #!/bin/bash
 
-ln -s ~/.dotfiles/oh-my-zsh ~/.oh-my-zsh
-ln -s ~/.dotfiles/zshrc ~/.zshrc
-ln -s ~/.dotfiles/zlogin ~/.zlogin
-ln -s ~/.dotfiles/my-zsh/plugins/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+DOTFILES_DIR=$HOME/.dotfiles
 
-ln -s ~/.dotfiles/vimrc ~/.vimrc
-ln -s ~/.dotfiles/xinitrc ~/.xinitrc
+ln -si $DOTFILES_DIR/oh-my-zsh $HOME/.oh-my-zsh
+ln -si $DOTFILES_DIR/zshrc $HOME/.zshrc
+ln -si $DOTFILES_DIR/zlogin $HOME/.zlogin
+ln -si $DOTFILES_DIR/my-zsh/plugins/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-ln -s ~/.dotfiles/Xresources ~/.Xresources
-ln -s ~/.dotfiles/Xresources ~/.Xdefaults
+ln -si $DOTFILES_DIR/vimrc $HOME/.vimrc
+ln -si $DOTFILES_DIR/xinitrc $HOME/.xinitrc
 
-sh ~/.dotfiles/bin/urxvt-tabbed/install
+ln -si $DOTFILES_DIR/Xresources $HOME/.Xresources
+ln -si $DOTFILES_DIR/Xresources $HOME/.Xdefaults
+
+sh $DOTFILES_DIR/bin/urxvt-tabbed/install
