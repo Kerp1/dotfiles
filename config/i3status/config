@@ -29,7 +29,9 @@ bluetooth {
 }
 
 wifistatus {
-        cache_timeout = 5
+        error_cache_timeout = 1
+        cache_timeout = 10
+        icon_color = "#00AA00"
         interface = wlp58s0
 }
 
