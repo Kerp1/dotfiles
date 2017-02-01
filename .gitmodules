@@ -10,3 +10,9 @@
 [submodule "bin/urxvt-tabbed"]
 	path = bin/urxvt-tabbed
 	url = https://github.com/mina86/urxvt-tabbedex
+[submodule "my-zsh/plugins/fzf-zsh"]
+	path = my-zsh/plugins/fzf-zsh
+	url = git@github.com:Treri/fzf-zsh.git
+[submodule "my-zsh/plugins/fzf"]
+	path = my-zsh/plugins/fzf
+	url = git@github.com:junegunn/fzf.git

@@ -10,6 +10,9 @@ ln -s $DOTFILES_DIR/zshrc $HOME/.zshrc
 ln -s $DOTFILES_DIR/zlogin $HOME/.zlogin
 ln -s $DOTFILES_DIR/my-zsh/plugins/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
+ln -s $DOTFILES_DIR/my-zsh/plugins/fzf-zsh $HOME/.oh-my-zsh/custom/plugins/fzf-zsh
+$DOTFILES_DIR/my-zsh/plugins/fzf/install --bin
+
 ln -s $DOTFILES_DIR/vimrc $HOME/.vimrc
 ln -s $DOTFILES_DIR/xinitrc $HOME/.xinitrc
 
