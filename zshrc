@@ -51,7 +51,7 @@ zstyle ':completion:*' special-dirs true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux sudo git zsh-syntax-highlighting sublime fancy-ctrl-z cp, fzf-zsh)
+plugins=(archlinux sudo git zsh-syntax-highlighting sublime fancy-ctrl-z cp)
 # User configuration
 
 export PATH="/bin:/usr/local/bin:/usr/bin"

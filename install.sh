@@ -26,6 +26,5 @@ mkdir $CONFIG_DIR
 for directory in `ls config`
 do
   echo "Symlinking configuration for $directory"
-  mkdir $CONFIG_DIR/$directory
-  ln -s $DOTFILES_DIR/config/$directory/config $CONFIG_DIR/$directory/config
+  ln -s $DOTFILES_DIR/config/$directory $CONFIG_DIR/$directory
 done
