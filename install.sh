@@ -19,6 +19,9 @@ ln -s $DOTFILES_DIR/xinitrc $HOME/.xinitrc
 ln -s $DOTFILES_DIR/Xresources $HOME/.Xresources
 ln -s $DOTFILES_DIR/Xresources $HOME/.Xdefaults
 
+ln -s $DOTFILES_DIR/gtkrc-2.0.mine $HOME/.gtkrc-2.0.mine
+
+
 sh $DOTFILES_DIR/bin/urxvt-tabbed/install
 
 
