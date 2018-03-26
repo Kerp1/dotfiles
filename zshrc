@@ -103,10 +103,11 @@ alias digitvpn="sudo openvpn /etc/openvpn/digit.conf"
 alias pbuf="xclip -selection c"
 alias cb="cargo build"
 alias cr="cargo run"
-alias pacupg="pacaur -Syu"
+alias pacupg="yay -Syu --noconfirm"
 alias eduroam="sudo nmcli con up id eduroam || (sudo systemctl restart NetworkManager.service && sudo nmcli con up id eduroam &)"
-alias lunch="curl https://chalmers.it/lunch/feed | less"
-
+alias wifi="sudo nmcli con up id"
+alias lunch="curl https://chalmers.it/lunch/feed\?filter=Johanneberg | less"
+alias ls="exa --git -hH"
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 function haste() { a=$(cat); curl -X POST -s -d "$a" https://paste.kerp.se/documents | awk -F '"' '{print "https://paste.kerp.se/"$4}'; }
@@ -134,4 +135,5 @@ function do_enter() {
 }
 zle -N do_enter
 bindkey '^m' do_enter
+export GOPATH=/home/kerp/projects/go 
 
