@@ -12,7 +12,7 @@
 background = #dd222222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = #bbbbbb
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
@@ -46,11 +46,13 @@ font-0 = Inconsolata:pixelsize=22;1
 font-1 = unifont:fontformat=truetype:size=20:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
 ;font-2 = "Wuncon Siji:pixelsize=24;1"
-font-2 = "FontAwesome:pixelsize=18;1"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=16;1"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=16;1"
+font-4 = "Font Awesome 5 Brands:pixelsize=16;1"
 
 modules-left = i3
 modules-center = spotify
-modules-right = xbacklight volume wlan battery date
+modules-right = xbacklight volume memory wlan battery date
 
 tray-position = right
 tray-padding = 2
@@ -189,7 +191,7 @@ type = internal/xbacklight
 format = <label> <bar>
 label = 
 
-bar-width = 10
+bar-width = 6
 bar-indicator = |
 bar-indicator-foreground = #ff
 bar-indicator-font = 2
@@ -215,11 +217,13 @@ label = %percentage%%
 
 [module/memory]
 type = internal/memory
-interval = 2
+interval = 10
+format =  <label> 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
-label = %percentage_used%%
+format-underline = #2b63bc
+label = %gb_used% 
+
 
 [module/wlan]
 type = internal/network
@@ -273,20 +277,22 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #660a6cf5
 
-label = %date% %time%
+label = %date% %time%
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
 label-volume = 
 label-volume-foreground = ${root.foreground}
 
+format-muted = <label-muted> <bar-volume>
 format-muted-prefix = 
-format-muted-foreground = ${colors.foreground-alt}
-label-muted =      
+format-muted-foreground = ${root.foreground}
+;label-muted =      
+label-muted =  
 
-bar-volume-width = 10
+bar-volume-width = 6
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
