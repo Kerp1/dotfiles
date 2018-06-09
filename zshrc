@@ -51,16 +51,10 @@ DISABLE_AUTO_UPDATE="false"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux sudo git zsh-syntax-highlighting sublime fancy-ctrl-z cp)
+plugins=(sudo git zsh-syntax-highlighting sublime fancy-ctrl-z cp)
 # User configuration
 
 export PATH="/bin:/usr/local/bin:/usr/bin"
-#Ruby
-export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin:$HOME/.rbenv/bin/"
-#Perl
-export PATH="$PATH:/usr/bin/core_perl/"
-#Rust
-export PATH="$PATH:$HOME/.cargo/bin"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,20 +95,15 @@ alias irkk="ssh -t cantina irkk"
 alias gspp="git stash && git pull --rebase && git stash pop"
 alias digitvpn="sudo openvpn /etc/openvpn/digit.conf"
 alias pbuf="xclip -selection c"
-alias cb="cargo build"
-alias cr="cargo run"
-alias pacupg="yay -Syu --noconfirm"
-alias eduroam="sudo nmcli con up id eduroam || (sudo systemctl restart NetworkManager.service && sudo nmcli con up id eduroam &)"
-alias wifi="sudo nmcli con up id"
 alias lunch="curl https://chalmers.it/lunch/feed\?filter=Johanneberg | less"
 alias ls="exa --git -hH"
+alias sudoedit="sudo -e"
+alias gupas="gup --autostash"
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 function haste() { a=$(cat); curl -X POST -s -d "$a" https://paste.kerp.se/documents | awk -F '"' '{print "https://paste.kerp.se/"$4}'; }
 
 function path() {echo $PATH | tr ':' '\n'}
-
-eval "$(rbenv init -)"
 
 source $HOME/.dotfiles/bin/z/z.sh
 
